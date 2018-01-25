@@ -1,0 +1,44 @@
+<div>
+ATS Products Test
+
+    <table id="products" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+        <th>productName</th>
+        <th>Base price</th>
+        <th>Category</th>
+        <th>Brand</th>
+        <th>productMaterial</th>
+        <th>Image</th>
+        <th>Delivry Date</th>
+        <th>Details</th>
+        <th>Reviews</th>
+        <th>Action</th>
+        </thead>
+        <tbody>
+        <tr ng-repeat="product in products">
+            <td> {{product.productName}}</td>
+            <td> {{product.basePrice}}</td>
+            <td> {{product.category}}</td>
+            <td> {{product.brand}}</td>
+            <td> {{product.productMaterial}}</td>
+            <td> <img src="{{product.imageUrl}}" width="50" height="50"></td>
+            <td> {{product.productName}}</td>
+            <td> {{product.delivery}}</td>
+            <td> {{product.details}}</td>
+            <td>
+                <ul ng-repeat="rev in product.reviews">
+                    <li>Rating : {{rev.rating}}</li>
+                    <li>{{rev.content}}</li>
+                </ul>
+            </td>
+            <td> <button ng-click="viewDetails(product.category)">View Détails</button></td>
+
+        </tr>
+        </tbody>
+    </table>
+<ul>
+<li></li>
+</ul>
+</div>
+
+
